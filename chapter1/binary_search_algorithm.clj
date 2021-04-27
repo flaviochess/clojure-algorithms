@@ -7,19 +7,19 @@
 
 (defn binary-search
   "search a number position in a ordered list/array"
-  [list, item]
+  ([list, item]
+   (binary-search list item 0 (- (count list) 1)))
 
-  (loop [low 0
-         high (- (count list) 1)]
-    (if (> low high)
-      nil
-      (let [mid (get-middle low high)
-            guess (get list mid)]
-        (if (= guess item)
-          mid
-          (if (> guess item)
-            (recur low (- mid 1))
-            (recur (+ mid 1) high)))))))
+  ([list item low high]
+   (if (> low high)
+     nil
+     (let [mid (get-middle low high)
+           guess (get list mid)]
+       (if (= guess item)
+         mid
+         (if (> guess item)
+           (recur list item low (- mid 1))
+           (recur list item (+ mid 1) high)))))))
 
 ;tests
 (def my-list [1, 3, 5, 7, 9])

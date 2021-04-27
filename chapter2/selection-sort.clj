@@ -9,16 +9,17 @@
 
 (defn selection-sort
   "return a new list ordered based on the list passed"
-  [list]
+  ([list]
+   (selection-sort list []))
 
-  (loop [original-list list
-         final-list []]
-    (if (= (count original-list) 0)
-      final-list
-      (let [smallest (reduce get-smallest original-list)
-            iterator-list (remove #{smallest} original-list)
-            result-list (conj final-list smallest)]
-        (recur iterator-list result-list)))))
+  ([unordered-list ordered-list]
+    (if (seq unordered-list)
+      (do
+        (let [smallest (reduce get-smallest unordered-list)
+              iterator-list (remove #{smallest} unordered-list)
+              result-list (conj ordered-list smallest)]
+          (recur iterator-list result-list)))
+      ordered-list)))
 
 ;tests
 (println (get-smallest 15 9)) ;result = 9

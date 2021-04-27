@@ -3,7 +3,7 @@ Famous algorithms in Clojure for learning the language
 
 
 ## Important
-It's a study repository for me to learn Clojure. Don't use it how reference because I'm still learning the languagem.
+It's a study repository for me to learn Clojure. Don't use it how reference because I'm still learning the language.
 
 Here don't have a project clojure structure, just a few loose files (namespaces).
 

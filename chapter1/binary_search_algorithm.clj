@@ -23,7 +23,7 @@
 
 ;tests
 (def my-list [1, 3, 5, 7, 9])
-(println (binary-search my-list 3)) ;position result = 1
-(println (binary-search my-list 9)) ;position result = 4
-(println (binary-search my-list 2)) ;position result = nil
-(println (binary-search my-list 7)) ;position result = 3
+(println (binary-search my-list 3)) ; => 1
+(println (binary-search my-list 9)) ; => 4
+(println (binary-search my-list 2)) ; => nil
+(println (binary-search my-list 7)) ; => 3

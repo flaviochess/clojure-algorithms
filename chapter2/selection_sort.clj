@@ -22,6 +22,6 @@
       ordered-list)))
 
 ;tests
-(println (get-smallest 15 9)) ;result = 9
-(println (reduce get-smallest [15 9 7 10 3 4 20 30])) ;result = 3
-(println (selection-sort [15 9 7 10 3 4 20 30])) ;result = [3 4 7 9 10 15 20 30]
+(println (get-smallest 15 9)) ; => 9
+(println (reduce get-smallest [15 9 7 10 3 4 20 30])) ; => 3
+(println (selection-sort [15 9 7 10 3 4 20 30])) ; => [3 4 7 9 10 15 20 30]

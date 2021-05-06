@@ -14,3 +14,4 @@ These algorithms are based on the book Grokking Algorithms.
 
 1. Binary Search - O(log n)
 2. Selection Sort - O(n²)
+3. Quicksort - O(n log n)
